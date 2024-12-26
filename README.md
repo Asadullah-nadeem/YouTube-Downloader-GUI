@@ -42,13 +42,79 @@ Before you run the program, you need to install the following dependencies:
     pip install yt-dlp Flask python-socketio
     ```
 
-3. **Ensure `ffmpeg` is installed**:
+To integrate the steps you provided into a comprehensive guide for installing and configuring FFmpeg for `yt-dlp`, here's how you can include it in your README or instructions:
 
-    `yt-dlp` uses `ffmpeg` for processing video and audio files. You can download it from [ffmpeg.org](https://ffmpeg.org/download.html) and add it to your system's PATH. Alternatively, if you're using Windows, you can install it via:
+---
 
-    ```bash
-    choco install ffmpeg
-    ```
+### 3. **Ensure `ffmpeg` is installed**:
+
+`yt-dlp` uses `ffmpeg` for processing video and audio files. Follow the steps below to install and configure FFmpeg on your system:
+
+#### Step-by-Step Installation Guide for FFmpeg on Windows:
+
+1. **Download FFmpeg**:
+   - Go to the official FFmpeg builds site: [https://www.gyan.dev/ffmpeg/builds/](https://www.gyan.dev/ffmpeg/builds/).
+   - Under **"Windows Builds"**, download the latest **"ffmpeg-release-essentials.zip"** file.
+
+2. **Extract FFmpeg**:
+   - Extract the ZIP file to a folder on your system, such as `C:\ffmpeg`.
+   - After extraction, the `C:\ffmpeg` folder will contain subfolders like `bin`, `doc`, and `presets`.
+
+3. **Add FFmpeg to System PATH**:
+   - Press `Win + R`, type `sysdm.cpl`, and press Enter to open **System Properties**.
+   - Go to the **Advanced** tab and click on **Environment Variables**.
+   - Under **System Variables**, find the variable **Path** and click **Edit**.
+   - Click **New** and add the path to the `bin` folder of your extracted FFmpeg directory (e.g., `C:\ffmpeg\bin`).
+   - Click **OK** to close all dialogs.
+
+4. **Verify FFmpeg Installation**:
+   - Open a new **Command Prompt** or **terminal**.
+   - Run the following command:
+     ```bash
+     ffmpeg -version
+     ```
+   - You should see the FFmpeg version details. This confirms that FFmpeg is installed correctly.
+
+
+
+#### Alternative Installation (Using Chocolatey):
+
+If you're using Windows and have **Chocolatey** installed, you can install FFmpeg via the following command:
+
+```bash
+choco install ffmpeg
+```
+
+#### Configure `yt-dlp` with FFmpeg:
+
+Once FFmpeg is installed and added to your system's PATH, you need to specify the location of FFmpeg in `yt-dlp`. Here’s how to do that:
+
+- **Specify the `ffmpeg_location` in your `yt-dlp` options**:
+  
+  Replace `C:\ffmpeg\bin` with the correct path where you extracted FFmpeg. Ensure that the folder contains both `ffmpeg.exe` and `ffprobe.exe`.
+
+  For example:
+
+  ```python
+  ydl_opts = {
+      'ffmpeg_location': r'C:\ffmpeg\bin',  # Update this path
+  }
+  ```
+
+#### Verify Your FFmpeg Installation:
+
+Confirm that the following files exist in your `ffmpeg\bin` folder:
+
+```bash
+C:\ffmpeg\bin\ffmpeg.exe
+C:\ffmpeg\bin\ffprobe.exe
+```
+
+If both files are present, FFmpeg is installed and ready to be used with `yt-dlp`.
+
+---
+
+This will ensure that FFmpeg is installed, configured, and ready to be used by `yt-dlp` for processing videos and audio files.
 
 4. **Directory Structure**:
 
