@@ -1,4 +1,4 @@
-# YouTube Downloader GUI
+# YouTube Playlist Downloader 
 ![image](https://github.com/user-attachments/assets/570e7340-9754-4338-8770-9168738d5de5)
 
 This project is a Python-based GUI application for downloading YouTube videos and audio. It uses `yt-dlp` for downloading and provides a simple interface for users to interact with. You can choose to download audio or video files in different resolutions and formats.
