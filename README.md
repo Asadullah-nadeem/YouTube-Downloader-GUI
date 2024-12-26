@@ -24,8 +24,8 @@ Before you run the program, you need to install the following dependencies:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/Asadullah-nadeem/YouTube-Downloader-GUI.git
-    cd YouTube-Downloader-GUI
+    git clone https://github.com/Asadullah-nadeem/YouTube-playlist-Downloader.git
+    cd YouTube-playlist-Downloader
     ```
 
 2. **Install dependencies**:
