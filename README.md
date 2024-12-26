@@ -15,7 +15,7 @@ This project is a Python-based GUI application for downloading YouTube videos an
 
 Before you run the program, you need to install the following dependencies:
 
-- Python 3.x (preferably 3.7 or higher)
+- Python 3.x (preferably 3.13.1 or higher)
 - `yt-dlp` for downloading YouTube videos and audio.
 - `Flask` and `SocketIO` for server integration (optional).
 
